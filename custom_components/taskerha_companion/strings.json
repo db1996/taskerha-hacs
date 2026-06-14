@@ -15,12 +15,8 @@
       "message_received": "Receive message from TaskerHA"
     },
     "extra_fields": {
-      "type_filter": {
-        "name": "Type"
-      },
-      "message_filter": {
-        "name": "Message"
-      }
+      "type_filter": "Type",
+      "message_filter": "Message"
     }
   },
   "services": {
