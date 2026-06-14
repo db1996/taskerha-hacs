@@ -1,0 +1,46 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "TaskerHA Companion",
+        "description": "TaskerHA Companion provides services for retrieving Home Assistant registry data (labels, areas, devices) for use with the TaskerHA Android app.\n\nNo configuration is required. Click Submit to enable the integration."
+      }
+    },
+    "abort": {
+      "already_configured": "TaskerHA Companion is already configured."
+    }
+  },
+  "device_automation": {
+    "trigger_type": {
+      "message_received": "Receive message from TaskerHA"
+    },
+    "extra_fields": {
+      "type_filter": {
+        "name": "Type"
+      },
+      "message_filter": {
+        "name": "Message"
+      }
+    }
+  },
+  "services": {
+    "get_registry_data": {
+      "name": "Get Registry Data",
+      "description": "Retrieve all labels, devices, and areas with their associated entity IDs in a single call. Designed for use with the TaskerHA Android app."
+    },
+    "send_taskerha_message": {
+      "name": "Send Message to TaskerHA",
+      "description": "Fire a taskerha_message event that triggers an On HA Message profile in the TaskerHA Android app.",
+      "fields": {
+        "type": {
+          "name": "Type",
+          "description": "Optional message type, matched against the Type filter in the TaskerHA profile."
+        },
+        "message": {
+          "name": "Message",
+          "description": "Optional message body, matched against the Message filter in the TaskerHA profile."
+        }
+      }
+    }
+  }
+}

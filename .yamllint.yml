@@ -1,5 +1,5 @@
 ---
-# yamllint configuration for ha_integration_domain
+# yamllint configuration for taskerha_companion
 # Documentation: https://yamllint.readthedocs.io/en/stable/rules.html
 
 extends: default
@@ -10,10 +10,8 @@ ignore: |
   schemas/yaml/
   .github/ISSUE_TEMPLATE/
   .github/workflows/
-  .pre-commit-config.yaml
   # .github/workflows/ — GitHub Actions cache keys and run: blocks routinely exceed
   # 120 chars and cannot be meaningfully wrapped. Workflows have their own validation.
-  # .pre-commit-config.yaml — hook entry: fields contain bash one-liners that are
   # structurally un-wrappable (up to 625 chars). pre-commit has its own schema.
 
 rules:

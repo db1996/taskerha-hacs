@@ -23,7 +23,6 @@ tests/
 # Syncing them back would revert those substitutions.
 pyproject.toml
 .yamllint.yml
-.pre-commit-config.yaml
 
 # ── Ignore pattern files ───────────────────────────────────────
 # .gitignore and .prettierignore contain a domain-specific negation pattern

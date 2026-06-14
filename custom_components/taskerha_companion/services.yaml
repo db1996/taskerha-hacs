@@ -1,0 +1,22 @@
+get_registry_data:
+  name: Get Registry Data
+  description: Retrieve all labels, devices, and areas with their associated entities in a single call. Designed for use with the TaskerHA Android app.
+
+send_taskerha_message:
+  name: Send Message to TaskerHA
+  description: Fire a taskerha_message event that triggers an On HA Message profile in the TaskerHA Android app.
+  fields:
+    type:
+      name: Type
+      description: Optional message type, matched against the Type filter in the TaskerHA profile.
+      required: false
+      example: "my_event"
+      selector:
+        text:
+    message:
+      name: Message
+      description: Optional message body, matched against the Message filter in the TaskerHA profile.
+      required: false
+      example: "Hello from Home Assistant"
+      selector:
+        text:

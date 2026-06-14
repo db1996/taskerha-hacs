@@ -64,17 +64,6 @@
       "problemMatcher": []
     },
     {
-      "label": "Pre-commit (All Hooks)",
-      "type": "shell",
-      "command": "pre-commit run --all-files",
-      "group": "test",
-      "presentation": {
-        "reveal": "always",
-        "panel": "new"
-      },
-      "problemMatcher": []
-    },
-    {
       "label": "Install Requirements",
       "type": "shell",
       "command": "${command:python.interpreterPath} -m pip install -r requirements.txt",
@@ -154,7 +143,7 @@
     {
       "label": "Validate Manifest",
       "type": "shell",
-      "command": "${command:python.interpreterPath} -c \"import json; json.load(open('custom_components/ha_integration_domain/manifest.json')); print('✅ manifest.json is valid')\"",
+      "command": "${command:python.interpreterPath} -c \"import json; json.load(open('custom_components/taskerha_companion/manifest.json')); print('✅ manifest.json is valid')\"",
       "group": "test",
       "presentation": {
         "reveal": "always",

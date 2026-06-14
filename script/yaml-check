@@ -31,7 +31,6 @@ yamllint -c .yamllint.yml \
     "$INTEGRATION_PATH"/ \
     schemas/yaml/ \
     .github/ \
-    .pre-commit-config.yaml \
     .prettierrc.yml
 
 run_hook "yaml-check" "post"

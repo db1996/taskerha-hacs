@@ -1,0 +1,13 @@
+{
+  "domain": "taskerha_companion",
+  "name": "TaskerHA Companion",
+  "codeowners": [
+    "@db1996"
+  ],
+  "config_flow": true,
+  "documentation": "https://github.com/db1996/taskerha-hacs",
+  "integration_type": "hub",
+  "iot_class": "cloud_polling",
+  "issue_tracker": "https://github.com/db1996/taskerha-hacs/issues",
+  "version": "0.1.0"
+}

@@ -8,7 +8,7 @@ Repositories created from this blueprint can receive upstream improvements autom
 
 ### How it works
 
-Every Monday at 07:00 UTC, the workflow checks whether the upstream blueprint (`jpawlowski/hacs.integration_blueprint`) has new commits. If it does, it opens a pull request with the diff against your repository.
+Every Monday at 07:00 UTC, the workflow checks whether the upstream blueprint (`db1996/taskerha-hacs`) has new commits. If it does, it opens a pull request with the diff against your repository.
 
 The workflow is configured to update an existing open template-sync PR when possible (force-push + PR edit) instead of closing it and opening a new one each run.
 
@@ -106,7 +106,6 @@ Files already excluded by default:
 | `tests/`                                                                       | Test files reference your domain (set by `initialize.sh`)                |
 | `pyproject.toml`                                                               | Contains your domain in package metadata                                 |
 | `.yamllint.yml`                                                                | Contains your domain in configuration comment                            |
-| `.pre-commit-config.yaml`                                                      | Contains your domain in file-match patterns                              |
 | `requirements.txt`                                                             | Your integration's PyPI dependencies (managed alongside `manifest.json`) |
 | `.vscode/launch.json`, `.vscode/tasks.json`                                    | Contain your domain in debugger/task arguments                           |
 | `README.md`, `LICENSE`, etc.                                                   | Replaced by `initialize.sh`                                              |
@@ -132,7 +131,7 @@ rm .github/workflows/template-sync.yml
 rm .templatesyncignore
 ```
 
-That's it. No workflow runs, no PRs, no noise. You can still pull upstream changes manually at any time by comparing your repository against `jpawlowski/hacs.integration_blueprint`.
+That's it. No workflow runs, no PRs, no noise. You can still pull upstream changes manually at any time by comparing your repository against `db1996/taskerha-hacs`.
 
 ---
 
@@ -253,8 +252,8 @@ The devcontainer setup can be customized through environment variable files with
 
 ### Two-layer system
 
-| File                       | Committed          | Purpose                                              |
-| -------------------------- | ------------------ | ---------------------------------------------------- |
+| File                       | Committed         | Purpose                                              |
+| -------------------------- | ----------------- | ---------------------------------------------------- |
 | `.devcontainer/.env`       | ✅ Yes             | Project-level defaults, shared with all contributors |
 | `.devcontainer/.env.local` | ❌ No (gitignored) | Personal overrides, never affects others             |
 
@@ -367,7 +366,7 @@ my-private-package @ git+https://github.com/me/my-package.git
 
 | File                     | Template sync  | Purpose                                        |
 | ------------------------ | -------------- | ---------------------------------------------- |
-| `requirements.txt`       | ❌ Excluded    | Your integration's runtime dependencies        |
-| `requirements_dev.txt`   | ✅ Synced      | Development tool dependencies (shared)         |
-| `requirements_test.txt`  | ✅ Synced      | Test dependencies (shared)                     |
+| `requirements.txt`       | ❌ Excluded     | Your integration's runtime dependencies        |
+| `requirements_dev.txt`   | ✅ Synced       | Development tool dependencies (shared)         |
+| `requirements_test.txt`  | ✅ Synced       | Test dependencies (shared)                     |
 | `requirements.local.txt` | — (gitignored) | Your personal extra packages (never committed) |
