@@ -3,10 +3,9 @@
 [![hacs_badge](https://img.shields.io/badge/HACS-Custom-orange.svg)](https://github.com/hacs/integration)
 [![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)
 
-## View the full docs here:
+This is a companion HACS integration for the [TaskerHA Android App](https://github.com/db1996/TaskerHa).
 
-This is a companion HACS integration for the following Android App:
-[https://github.com/db1996/TaskerHa](https://github.com/db1996/TaskerHa)
+**[Full documentation](https://taskerha.db1996-gh.com/)**
 
 
 ## Install Home Assistant integration
