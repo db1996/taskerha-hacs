@@ -98,6 +98,7 @@
         "GitHub.copilot",
         "github.vscode-pull-request-github",
         "ms-python.python",
+        "ms-python.debugpy",
         "ms-python.vscode-pylance",
         "ms-vscode-remote.remote-containers",
         "ms-vscode.vscode-chat-customizations-evaluations",
